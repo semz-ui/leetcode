@@ -8,7 +8,7 @@ const twoSum = (nums: number[], target:number): number[] => {
         if(nums.includes(remainder)){
             const remainderIndex = nums.findIndex((num: number) => num === remainder)
             if(remainderIndex !== i) {
-                result = [nums[i], nums[remainderIndex]]
+                result = [i, remainderIndex]
             }
         }
     }
