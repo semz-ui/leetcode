@@ -19,7 +19,7 @@ const fourSum = (nums: number[], target: number): number[][] => {
                 if(target === sum) {
                     result.push([nums[i], nums[j], nums[left], nums[right]])
                     while(left < right && nums[left] === nums[left + 1]) left++
-                    while(left < right && nums[right] === nums[right - 1]) right++
+                    while(left < right && nums[right] === nums[right - 1]) right--
                     left++
                     right--
                 } else if (sum < target) {
@@ -34,4 +34,4 @@ const fourSum = (nums: number[], target: number): number[][] => {
     return result
 }
 
-console.log(fourSum([1, 0, -1, 0, -2, 2], 0))
+console.log(fourSum([2,2,2,2], 8))
